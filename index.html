@@ -105,6 +105,9 @@
       .logocontainer{
         animation: reverser 10s linear infinite;
       }
+      .title{
+          font-size: 1.5rem;
+      }
       @media only screen and (max-width: 768px) {
         .mainimg {
           padding: 1rem 7rem;
@@ -131,9 +134,9 @@
       }
     </style>
   </head>
-  <body class="bg-black flex items-center justify-center h-screen">
+  <body class="bg-black flex items-start justify-center h-screen">
     <div id="nodeBackground"></div>
-    <div class="text-center flex flex-col justify-center align-center items-center">
+    <div class="text-center flex flex-col justify-center align-center items-center mt-4">
       <div class="mx-auto bottom-20 text-primary text-center">
         <div id="timer" class="text-2xl mb-4">
           <div class="timer-circle">
@@ -158,9 +161,7 @@
         <h1 class="title uppertitle">Meta-pro.space</h1>
         <div class="flex items-center justify-center">
           <div class="rounded-full bg-[#dc9e27] w-4 h-4 mr-12"></div>
-          <div
-            class="logocontainer w-fit h-50 bg-[#dc9e27] rounded-full flex space-around p-5"
-          >
+          <div class="logocontainer w-fit h-50 bg-[#dc9e27] rounded-full flex space-around p-5">
             <img class="w-10 h-10" src="/assets/tiger.png" class="mainimg" />
           </div>
           <div class="rounded-full bg-[#dc9e27] w-4 h-4 ml-12"></div>
