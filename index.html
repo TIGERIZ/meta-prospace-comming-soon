@@ -98,6 +98,8 @@
         }
       }
       .logocircle {
+        overflow-x: hidden;
+        overflow-y: hidden;
         animation: rotate 10s linear infinite;
       }
       .logocontainer{
@@ -123,12 +125,15 @@
           font-size: 0.9rem;
           font-weight: 100;
         }
+        .title{
+          font-size: 1.7rem;
+        }
       }
     </style>
   </head>
   <body class="bg-black flex items-center justify-center h-screen">
     <div id="nodeBackground"></div>
-    <div class="text-center flex flex-col justify-center align-center">
+    <div class="text-center flex flex-col justify-center align-center items-center">
       <div class="mx-auto bottom-20 text-primary text-center">
         <div id="timer" class="text-2xl mb-4">
           <div class="timer-circle">
@@ -149,16 +154,16 @@
           </div>
         </div>
       </div>
-      <div class="flex flex-col items-center logocircle p-6">
+      <div class="flex flex-col items-center logocircle p-4 h-15">
         <h1 class="title uppertitle">Meta-pro.space</h1>
         <div class="flex items-center justify-center">
-          <div class="rounded-full bg-[#dc9e27] w-4 h-4 mr-24"></div>
+          <div class="rounded-full bg-[#dc9e27] w-4 h-4 mr-14"></div>
           <div
-            class="logocontainer absoulute top-0 w-fit h-50 bg-[#dc9e27] rounded-full flex space-around p-5"
+            class="logocontainer w-fit h-50 bg-[#dc9e27] rounded-full flex space-around p-5"
           >
             <img class="w-10 h-10" src="/assets/tiger.png" class="mainimg" />
           </div>
-          <div class="rounded-full bg-[#dc9e27] w-4 h-4 ml-24"></div>
+          <div class="rounded-full bg-[#dc9e27] w-4 h-4 ml-14"></div>
         </div>
         <h1 class="title lowertitle">Meta-pro.space</h1>
       </div>
@@ -202,8 +207,8 @@
       const uppertitle = new CircleType(document.querySelector(".uppertitle"));
       const lowertitle = new CircleType(document.querySelector(".lowertitle"));
 
-      uppertitle.radius(190);
-      lowertitle.radius(190).dir(-1);
+      uppertitle.radius(130);
+      lowertitle.radius(130).dir(-1);
     </script>
   </body>
 </html>
