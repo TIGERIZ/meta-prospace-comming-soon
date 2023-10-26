@@ -178,7 +178,7 @@ var checkExist = setInterval(function() {
             var squaredDistance = nodeA.squaredDistanceTo(nodeB);
 
             // calculate gravity force original = 3
-            var force = 0.6 * (nodeA.m * nodeB.m) / squaredDistance;
+            var force = 4 * (nodeA.m * nodeB.m) / squaredDistance;
 
             var opacity = force * 100;
 

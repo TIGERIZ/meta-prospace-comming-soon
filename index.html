@@ -16,7 +16,8 @@
     <style>
       .timer-circle {
         display: inline-block;
-        border: 2px solid white;
+        color:#00FF00;
+        border: 2px solid #00FF00;
         border-radius: 50%;
         padding: 20px;
         margin-right: 10px;
@@ -67,6 +68,10 @@
         letter-spacing: 0.4rem;
         text-indent: 2px;
       }
+      .mainimg{
+        width: 100%;
+        height: 100%;
+      }
       @media only screen and (max-width: 768px) {
         .timer-circle {
             width: 4.5rem;
@@ -74,6 +79,7 @@
             padding: 5px;
             margin-right: 5px;
         }
+
         .timer-circle span {
           font-size: 1.5rem;
           font-weight: 100;
@@ -89,8 +95,7 @@
     <div id="nodeBackground"></div>
     <div class="text-center flex flex-col justify-center align-center">
       <div class="mx-auto bottom-20 text-primary text-center">
-        <h1 class="text-4xl top-0 mb-10 text-white">Coming Soon</h1>
-        <div id="timer" class="text-2xl text-white mb-4 ">
+        <div id="timer" class="text-2xl mb-4 ">
           <div class="timer-circle">
             <span id="days"></span>
             <p>DAYS</p>
@@ -109,9 +114,10 @@
           </div>
         </div>
       </div>
-      <img src="/assets/tiger.png" class="p-5" />
+      <img src="/assets/tiger.png" class="p-5 mainimg" />
       <h1 class="title">Meta-pro.space</h1>
       <p class="subtitle">SMART CONTRACT</p>
+      <h1 class="text-4xl top-0 mt-10 text-white">Coming Soon</h1>
     </div>
     <script src="js/countdown.js"></script>
   </body>
