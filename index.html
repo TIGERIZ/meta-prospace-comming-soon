@@ -90,10 +90,10 @@
         }
       }
       @keyframes reverser {
-        from{
+        from {
           transform: rotate(360deg);
         }
-        to{
+        to {
           transform: rotate(0deg);
         }
       }
@@ -102,13 +102,17 @@
         overflow-y: hidden;
         animation: rotate 10s linear infinite;
       }
-      .logocontainer{
+      .logocontainer {
         animation: reverser 10s linear infinite;
       }
-      .title{
-          font-size: 1.5rem;
+      .title {
+        font-size: 1.5rem;
       }
-
+      .joinus {
+        font-family: "Roboto", sans-serif;
+        color: #dc9e27;
+        font-size: 1.6rem;
+      }
       @media only screen and (max-width: 768px) {
         .mainimg {
           padding: 1rem 7rem;
@@ -129,15 +133,26 @@
           font-size: 0.9rem;
           font-weight: 100;
         }
-        .title{
+        .title {
           font-size: 1.5rem;
         }
+        .subtitle {
+          font-size: 1rem;
+        }
+        .joinus {
+          font-size: 1rem;
+          color: #dc9e27;
+        }
       }
-      </style>
+    </style>
   </head>
-  <body class="bg-black flex items-start md:items-center justify-center h-screen">
+  <body
+    class="bg-black flex items-start md:items-center justify-center h-screen"
+  >
     <div id="nodeBackground"></div>
-    <div class="text-center flex flex-col justify-center align-center items-center  mt-4">
+    <div
+      class="text-center flex flex-col justify-center align-center items-center mt-4"
+    >
       <p class="subtitle">WORLD FIRST PRO SMART CONTRACT</p>
       <!--Timer-->
       <!-- <div class="mx-auto bottom-20 text-primary text-center">
@@ -164,15 +179,17 @@
         <h1 class="title uppertitle">Meta-pro.space</h1>
         <div class="flex items-center justify-center">
           <div class="rounded-full bg-[#dc9e27] w-4 h-4 mr-12"></div>
-          <div class="logocontainer w-fit h-50 bg-[#dc9e27] rounded-full flex space-around p-5">
+          <div
+            class="logocontainer w-fit h-50 bg-[#dc9e27] rounded-full flex space-around p-5"
+          >
             <img class="w-10 h-10" src="/assets/tiger.png" class="mainimg" />
           </div>
           <div class="rounded-full bg-[#dc9e27] w-4 h-4 ml-12"></div>
         </div>
         <h1 class="title lowertitle">Meta-pro.space</h1>
       </div>
-      <h1 class="text-4xl top-0 mb-2 comingsoon">Coming Soon</h1>
-      <p class="subtitle">Join our largest network for more infromation</p>
+      <h1 class="text-2xl top-0 mb-2 comingsoon">Coming Soon</h1>
+      <p class="joinus">Join our largest network for more infromation</p>
 
       <div class="social">
         <div class="icons">
