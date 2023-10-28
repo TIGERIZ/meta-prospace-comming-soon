@@ -58,13 +58,66 @@
         /* font-size: 2.8rem; */
         font-size: 1.5rem;
       }
+
+      /* Subtitle */
       .subtitle {
         font-family: "Roboto", sans-serif;
         font-weight: bold;
         font-size: 1.6rem;
         letter-spacing: 0.1rem;
         text-indent: 2px;
+        background: black;
+        border-radius: 10px;
+        width: max-content;
+        box-shadow: 1px -1px 2px white;
       }
+      .subtitle-text {
+        font-family: "Roboto", sans-serif;
+        font-weight: bold;
+        font-size: 1.6rem;
+        padding: 1rem 2rem;
+        background: linear-gradient(to right, gold, white, gold);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: 0.1rem;
+        text-indent: 2px;
+      }
+      .subtitle-main {
+        padding: 0.3rem;
+        margin:10px;
+        background: linear-gradient(
+          to right,
+          #b1913e,
+          #e0d2a3,
+          #b1913e,
+          #e0d2a3,
+          #b1913e
+        );
+        text-align: center;
+        border-radius: 15px;
+        color: white;
+      }
+      .subtitle-l1 {
+        padding: 0.2rem;
+        background: linear-gradient(
+          to right,
+          #d7b04b,
+          #ada27d,
+          #d7b04b,
+          #ada27d,
+          #d7b04b
+        );
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 1px -1px 2px white;
+      }
+      .subtitle-l2 {
+        padding: 0.2rem;
+        background: black;
+        text-align: center;
+        border-radius: 10px;
+      }
+      
       .mainimg {
         padding: 2rem 10rem;
       }
@@ -120,6 +173,11 @@
         color: deeppink;
         font-size: 1.6rem;
       }
+      #copyright {
+        position: absolute;
+        color: #a9a9a9ae;
+        bottom: 1px;
+      }
       @media only screen and (max-width: 768px) {
         .mainimg {
           padding: 1rem 7rem;
@@ -143,8 +201,9 @@
         .title {
           font-size: 1.5rem;
         }
-        .subtitle {
+        .subtitle-text {
           font-size: 1rem;
+          padding: 0rem 0.4rem;
         }
         .joinus {
           font-size: 1rem;
@@ -166,15 +225,17 @@
   >
     <div id="nodeBackground"></div>
     <div
-      class="text-center flex flex-col align-center items-center mt-9 h-screen"
+      class="text-center flex flex-col align-center items-center md:mt-4 h-screen"
     >
-      <p class="subtitle">
-        <span style="color: yellow;">WORLD</span>
-        <span style="color: green;">FIRST</span>
-        <span style="color: white;">PRO</span>
-        <span style="color: red;"> SMART</span>
-        <span style="color: purple;"> CONTRACT</span>
-      </p>
+      <div class="subtitle-main">
+        <div class="subtitle-l1">
+          <div class="subtitle-l2">
+            <div class="subtitle">
+              <span class="subtitle-text">WORLD FIRST PRO SMART CONTRACT </span>
+            </div>
+          </div>
+        </div>
+      </div>
       <!--Timer-->
       <!-- <div class="mx-auto bottom-20 text-primary text-center">
         <div id="timer" class="text-2xl mb-4">
@@ -268,6 +329,9 @@
           </a>
         </div>
       </div>
+    </div>
+    <div id="copyright">
+      <span>META PRO © 2023 All Rights Reserved</span>
     </div>
     <!-- <script src="js/countdown.js"></script> -->
     <script>
