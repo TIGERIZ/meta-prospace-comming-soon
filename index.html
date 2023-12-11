@@ -11,8 +11,14 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;800;&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;700&family=Raleway:ital,wght@0,100;0,400;0,700;0,800;1,500&display=swap"
+      rel="stylesheet"
+    />
+
     <script src="https://cdn.jsdelivr.net/gh/peterhry/CircleType@2.3.1/dist/circletype.min.js"></script>
-    <script src="/js/bganimate.js"></script>
+
+    <!-- <script src="/js/bganimate.js"></script> -->
     <script src="/js/countdown.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -20,9 +26,12 @@
         display: inline-block;
         font-weight: 800;
         color: #fff;
-        border: 2px solid #1fdf64;
+        border: 1px solid #fff;
         border-radius: 50%;
         padding: 20px;
+        padding-top: 25px;
+        font-family:'Noto Sans JP', sans-serif;
+        font-weight: 800;
         margin-right: 10px;
         width: 7rem;
         height: 7rem;
@@ -30,10 +39,10 @@
       }
       .timer-circle span {
         font-size: 3rem;
-        font-weight: 100;
+        font-weight: 400;
       }
       .timer-circle p {
-        font-size: 1.3rem;
+        font-size: 1rem;
         font-weight: 100;
         line-height: 1rem;
       }
@@ -46,6 +55,7 @@
         font-family: "Roboto", sans-serif;
         color: white;
       }
+
       #nodeBackground {
         position: fixed;
         width: 100%;
@@ -86,7 +96,7 @@
       }
       .subtitle-main {
         padding: 0.3rem;
-        margin:10px 10px 0px 10px;
+        margin: 10px 10px 0px 10px;
         background: linear-gradient(
           to right,
           #b1913e,
@@ -119,7 +129,7 @@
         text-align: center;
         border-radius: 10px;
       }
-      
+
       .mainimg {
         padding: 2rem 10rem;
       }
@@ -189,15 +199,15 @@
           height: 4.5rem;
           padding: 5px;
           margin-right: 5px;
-          border-width: 4px;
+          border-width: 2px;
         }
 
         .timer-circle span {
           font-size: 1.5rem;
-          font-weight: 100;
+          font-weight: 400;
         }
         .timer-circle p {
-          font-size: 0.9rem;
+          font-size: 0.8rem;
           font-weight: 100;
         }
         .title {
@@ -225,20 +235,18 @@
   <body
     class="bg-black flex items-start md:items-center justify-center h-screen"
   >
-    <div id="nodeBackground"></div>
+    <!-- <div id="nodeBackground"></div> -->
     <div
-      class="text-center flex flex-col align-center items-center md:mt-4 h-screen"
+    class="text-center flex flex-col align-center items-center md:mt-4 h-screen"
     >
-      <div class="subtitle-main">
-        <div class="subtitle-l1">
-          <div class="subtitle-l2">
-            <div class="subtitle">
-              <span class="subtitle-text">WORLD FIRST PRO SMART CONTRACT </span>
-            </div>
-          </div>
-        </div>
-      </div>
+    <!-- <div class="subtitle-main"> -->
+      <span class="subtitle-text mt-3">WORLD FIRST PRO SMART CONTRACT </span>
+      <!-- </div>   --> 
       <!--Timer-->
+      <div class="absolute z-[-1000] top-0 left-0 h-full w-full flex justify-center items-center">
+  
+        <img class="mb-32" src="/assets/speedig.jpg"  alt="">
+      </div>
       <div class="mx-auto mt-2 bottom-20 text-primary text-center">
         <div id="timer" class="text-2xl mb-4">
           <div class="timer-circle">
@@ -272,7 +280,7 @@
         </div>
         <h1 class="title lowertitle font-bold">Meta-pro.space</h1>
       </div>
-      <h1 class="text-2xl top-0 mb-2 comingsoon">Coming Soon</h1>
+      <h1 class="text-2xl top-0 mb-2 comingsoon">Coming Soon on BEP20</h1>
       <p class="joinus">Join Our Largest Network For More Infromation</p>
 
       <div class="social">

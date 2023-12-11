@@ -1,7 +1,7 @@
 var containerName = 'nodeBackground';
 var backgroundColor = '#0a0a0a';
-var nodeColor = '#e09049';
-var connectionRGB = '209, 109, 60';
+var nodeColor = '#fff';
+var connectionRGB = '255, 255, 255';
 
 var active = 0;
 var checkExist = setInterval(function() {
@@ -133,7 +133,7 @@ var checkExist = setInterval(function() {
         this.area = this.width * this.height;
 
         // calculate nodes needed original: / 25
-        this.nodes.length = Math.sqrt(this.area) / 10 | 0;
+        this.nodes.length = Math.sqrt(this.area) / 25 | 0;
 
         // set canvas size
         this.canvas.width = this.width;
@@ -178,7 +178,7 @@ var checkExist = setInterval(function() {
             var squaredDistance = nodeA.squaredDistanceTo(nodeB);
 
             // calculate gravity force original = 3
-            var force = 4 * (nodeA.m * nodeB.m) / squaredDistance;
+            var force = 3 * (nodeA.m * nodeB.m) / squaredDistance;
 
             var opacity = force * 100;
 
