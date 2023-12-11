@@ -30,7 +30,7 @@
         border-radius: 50%;
         padding: 20px;
         padding-top: 25px;
-        font-family:'Noto Sans JP', sans-serif;
+        font-family: "Noto Sans JP", sans-serif;
         font-weight: 800;
         margin-right: 10px;
         width: 7rem;
@@ -199,12 +199,12 @@
           height: 4.5rem;
           padding: 5px;
           margin-right: 5px;
-          border-width: 2px;
+          border-width: 1px;
         }
 
         .timer-circle span {
           font-size: 1.5rem;
-          font-weight: 400;
+          font-weight: 800;
         }
         .timer-circle p {
           font-size: 0.8rem;
@@ -237,16 +237,17 @@
   >
     <!-- <div id="nodeBackground"></div> -->
     <div
-    class="text-center flex flex-col align-center items-center md:mt-4 h-screen"
+      class="absolute z-[-1000] top-0 left-0 h-full w-full flex justify-center items-center"
     >
-    <!-- <div class="subtitle-main"> -->
+      <img class="h-full w-full object-cover" src="/assets/network3.jpg" alt="" />
+    </div>
+    <div
+      class="text-center flex flex-col align-center items-center md:mt-4 h-screen"
+    >
+      <!-- <div class="subtitle-main"> -->
       <span class="subtitle-text mt-3">WORLD FIRST PRO SMART CONTRACT </span>
-      <!-- </div>   --> 
+      <!-- </div>   -->
       <!--Timer-->
-      <div class="absolute z-[-1000] top-0 left-0 h-full w-full flex justify-center items-center">
-  
-        <img class="mb-32" src="/assets/speedig.jpg"  alt="">
-      </div>
       <div class="mx-auto mt-2 bottom-20 text-primary text-center">
         <div id="timer" class="text-2xl mb-4">
           <div class="timer-circle">
@@ -267,7 +268,10 @@
           </div>
         </div>
       </div>
-      <div class="flex flex-col items-center logocircle p-4 w-fit">
+
+      <div
+        class="flex flex-col items-center logocircle min-h-[15rem] min-w-[15rem]"
+      >
         <h1 class="title uppertitle font-bold">Meta-pro.space</h1>
         <div class="flex items-center justify-center">
           <div class="rounded-full bg-[#dc9e27] w-4 h-4 mr-12"></div>
@@ -280,7 +284,10 @@
         </div>
         <h1 class="title lowertitle font-bold">Meta-pro.space</h1>
       </div>
-      <h1 class="text-2xl top-0 mb-2 comingsoon">Coming Soon on BEP20</h1>
+      <div class="text-2xl top-0 mb-2 comingsoon">
+        <span class="text-green-400 font-bold">COMING SOON</span><br />
+        <span class="font-bold text-white">ON BEP20</span>
+      </div>
       <p class="joinus">Join Our Largest Network For More Infromation</p>
 
       <div class="social">
