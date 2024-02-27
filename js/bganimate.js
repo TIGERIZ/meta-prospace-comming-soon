@@ -1,7 +1,7 @@
 var containerName = 'nodeBackground';
 var backgroundColor = '#0a0a0a';
-var nodeColor = '#fff';
-var connectionRGB = '255, 255, 255';
+var nodeColor = '#ffd700';
+var connectionRGB = '255, 215, 0';
 
 var active = 0;
 var checkExist = setInterval(function() {
@@ -77,10 +77,14 @@ var checkExist = setInterval(function() {
         // this.garden.ctx.arc(this.x, this.y, this.getDiameter(), 0, 2 * Math.PI);
         // this.garden.ctx.fill();
 
-        var innerRadius = this.getDiameter()/8, outerRadius = this.getDiameter();
+        var innerRadius = this.getDiameter()/30, outerRadius = this.getDiameter();
         var gradient = this.garden.ctx.createRadialGradient(this.x, this.y, innerRadius, this.x, this.y, outerRadius);
+        // gradient.addColorStop(0.8, "#d2ae36");
+        gradient.addColorStop(0,"#d2ae36f9");
+        gradient.addColorStop(0.8, nodeColor+"f0");
         gradient.addColorStop(1, backgroundColor);
-        gradient.addColorStop(0, nodeColor);
+        // gradient.addColorStop(0, nodeColor);
+        // gradient.addColorStop(1, "white");
         this.garden.ctx.arc(this.x, this.y, outerRadius, 0, 2 * Math.PI);
         this.garden.ctx.fillStyle = gradient;
         this.garden.ctx.fill();
@@ -133,7 +137,7 @@ var checkExist = setInterval(function() {
         this.area = this.width * this.height;
 
         // calculate nodes needed original: / 25
-        this.nodes.length = Math.sqrt(this.area) / 25 | 0;
+        this.nodes.length = Math.sqrt(this.area) / 10 | 0;
 
         // set canvas size
         this.canvas.width = this.width;
@@ -182,7 +186,7 @@ var checkExist = setInterval(function() {
 
             var opacity = force * 100;
 
-            if (opacity < 0.25) {
+            if (opacity > 0.50) {
               continue;
             }
 
