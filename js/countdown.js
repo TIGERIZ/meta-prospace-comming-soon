@@ -1,14 +1,18 @@
 // Set the date we're counting down to
-var countDownDate = new Date("Mar 13, 2024 03:00:00").getTime(); 
+var countDownDate = new Date("Mar 13, 2024 08:30:00").getTime(); 
 
 // Update the count down every 1 second
 var x = setInterval(function () {
   // Get the current time
-  var now = new Date().getTime();
+  const date = new Date();
+  console.log(date);
+  const now = date.getTime();
+  console.log(now);
+  console.log(countDownDate);
 
   // Find the distance between now and the count down date
   var distance = countDownDate - now;
-
+  console.log(distance);
   // Time calculations for days, hours, minutes, and seconds
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
   var hours = Math.floor(
