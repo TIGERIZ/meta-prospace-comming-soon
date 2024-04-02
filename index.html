@@ -22,245 +22,295 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     .timer-circle {
-    display: inline-block;
-    font-weight: 800;
-    color: #fff;
-    border: 2px solid #fff;
-    border-radius: 50%;
-    padding: 20px;
-    padding-top: 25px;
-    font-family: "Noto Sans JP", sans-serif;
-    font-weight: 800;
-    margin-right: 10px;
-    width: 7rem;
-    height: 7rem;
-    text-align: center;
+      display: inline-block;
+      font-weight: 800;
+      color: #fff;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      padding: 20px;
+      padding-top: 25px;
+      font-family: "Noto Sans JP", sans-serif;
+      font-weight: 800;
+      margin-right: 10px;
+      width: 7rem;
+      height: 7rem;
+      text-align: center;
     }
 
     .timer-circle span {
-    font-size: 3rem;
-    font-weight: 400;
+      font-size: 3rem;
+      font-weight: 400;
     }
 
     .timer-circle p {
-    font-size: 1rem;
-    font-weight: 100;
-    line-height: 1rem;
+      font-size: 1rem;
+      font-weight: 100;
+      line-height: 1rem;
     }
 
     * {
-    margin: 0px;
-    padding: 0px;
+      margin: 0px;
+      padding: 0px;
     }
 
 
     body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 100vh;
-    background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      min-height: 100vh;
+      background: #000;
     }
 
-    /* body,
-    html {
-    font-family: "Roboto", sans-serif;
-    color: white;
-    } */
+
 
     #nodeBackground {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: -100;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -100;
     }
 
     .title {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    color: #dc9e27;
-    /* font-size: 2.8rem; */
-    font-size: 1.5rem;
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      color: #dc9e27;
+      /* font-size: 2.8rem; */
+      font-size: 1.5rem;
     }
 
     /* Subtitle */
     .subtitle {
-    font-family: "Roboto", sans-serif;
-    font-weight: bold;
-    font-size: 1.6rem;
-    letter-spacing: 0.1rem;
-    text-indent: 2px;
-    background: black;
-    border-radius: 10px;
-    width: max-content;
-    box-shadow: 1px -1px 2px white;
+      font-family: "Roboto", sans-serif;
+      font-weight: bold;
+      font-size: 1.6rem;
+      letter-spacing: 0.1rem;
+      text-indent: 2px;
+      background: black;
+      border-radius: 10px;
+      width: max-content;
+      box-shadow: 1px -1px 2px white;
     }
 
     .subtitle-text {
-    font-family: "Roboto", sans-serif;
-    font-weight: bold;
-    font-size: 1.6rem;
-    padding: 1rem 2rem;
-    background: yellow;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing: 0.1rem;
-    text-indent: 2px;
+      font-family: "Roboto", sans-serif;
+      font-weight: bold;
+      font-size: 1.6rem;
+      padding: 1rem 2rem;
+      background: yellow;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 0.1rem;
+      text-indent: 2px;
     }
 
     .subtitle-main {
-    padding: 0.3rem;
-    margin: 10px 10px 0px 10px;
-    background: linear-gradient(to right,
-    #b1913e,
-    #e0d2a3,
-    #b1913e,
-    #e0d2a3,
-    #b1913e);
-    text-align: center;
-    border-radius: 15px;
-    color: white;
+      padding: 0.3rem;
+      margin: 10px 10px 0px 10px;
+      background: linear-gradient(to right,
+          #b1913e,
+          #e0d2a3,
+          #b1913e,
+          #e0d2a3,
+          #b1913e);
+      text-align: center;
+      border-radius: 15px;
+      color: white;
     }
 
     .subtitle-l1 {
-    padding: 0.2rem;
-    background: linear-gradient(to right,
-    #d7b04b,
-    #ada27d,
-    #d7b04b,
-    #ada27d,
-    #d7b04b);
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 1px -1px 2px white;
+      padding: 0.2rem;
+      background: linear-gradient(to right,
+          #d7b04b,
+          #ada27d,
+          #d7b04b,
+          #ada27d,
+          #d7b04b);
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 1px -1px 2px white;
     }
 
     .subtitle-l2 {
-    padding: 0.2rem;
-    background: black;
-    text-align: center;
-    border-radius: 10px;
+      padding: 0.2rem;
+      background: black;
+      text-align: center;
+      border-radius: 10px;
     }
 
     .mainimg {
-    padding: 2rem 10rem;
+      padding: 2rem 10rem;
     }
 
     .comingsoon {
-    color: rgb(0, 255, 94);
+      color: rgb(0, 255, 94);
     }
 
     .social {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    max-width: 500px;
-    flex-wrap: wrap;
-    column-gap: 0.2rem;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      max-width: 500px;
+      flex-wrap: wrap;
+      column-gap: 0.2rem;
     }
 
     .icons {
-    margin-right: 5px;
-    width: 50px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.3rem;
+      margin-right: 5px;
+      width: 50px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.3rem;
     }
 
     @keyframes rotate {
-    from {
-    transform: rotate(0deg);
-    }
+      from {
+        transform: rotate(0deg);
+      }
 
-    to {
-    transform: rotate(360deg);
-    }
+      to {
+        transform: rotate(360deg);
+      }
     }
 
     @keyframes reverser {
-    from {
-    transform: rotate(360deg);
-    }
+      from {
+        transform: rotate(360deg);
+      }
 
-    to {
-    transform: rotate(0deg);
-    }
+      to {
+        transform: rotate(0deg);
+      }
     }
 
     .logocircle {
-    overflow-x: hidden;
-    overflow-y: hidden;
-    animation: rotate 10s linear infinite;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      animation: rotate 10s linear infinite;
     }
 
     .logocontainer {
-    animation: reverser 10s linear infinite;
+      animation: reverser 10s linear infinite;
     }
 
     .joinus {
-    font-family: "Roboto", sans-serif;
-    font-size: 1.6rem;
+      font-family: "Roboto", sans-serif;
+      font-size: 1.6rem;
     }
 
     .copyright {
-    color: #fff;
+      color: #fff;
     }
 
     @media only screen and (max-width: 768px) {
-    .mainimg {
-    padding: 1rem 7rem;
+      .mainimg {
+        padding: 1rem 7rem;
+      }
+
+      .timer-circle {
+        width: 4.5rem;
+        height: 4.5rem;
+        padding: 5px;
+        margin-right: 5px;
+        border-width: 2px;
+      }
+
+      .timer-circle span {
+        font-size: 1.5rem;
+        font-weight: 800;
+      }
+
+      .timer-circle p {
+        font-size: 0.8rem;
+        font-weight: 100;
+      }
+
+      .title {
+        font-size: 1.5rem;
+      }
+
+      .subtitle-text {
+        font-size: 1rem;
+        padding: 0rem 0.4rem;
+      }
+
+      .joinus {
+        font-size: 1rem;
+      }
+
+      .social {
+        max-width: 350px;
+        column-gap: 1rem;
+        row-gap: 0.5rem;
+      }
+
+      .icons {
+        width: 60px;
+        height: 60px;
+      }
     }
 
-    .timer-circle {
-    width: 4.5rem;
-    height: 4.5rem;
-    padding: 5px;
-    margin-right: 5px;
-    border-width: 2px;
+    /* ---- reset ---- */
+    canvas {
+      display: block;
+      vertical-align: bottom;
     }
 
-    .timer-circle span {
-    font-size: 1.5rem;
-    font-weight: 800;
+    /* ---- particles.js container ---- */
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #000000;
+      background-image: url("");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 50%;
     }
 
-    .timer-circle p {
-    font-size: 0.8rem;
-    font-weight: 100;
+    /* ---- stats.js ---- */
+    .count-particles {
+      background: #000022;
+      position: absolute;
+      top: 48px;
+      left: 0;
+      width: 80px;
+      color: #13E8E9;
+      font-size: .8em;
+      text-align: left;
+      text-indent: 4px;
+      line-height: 14px;
+      padding-bottom: 2px;
+      font-family: Helvetica, Arial, sans-serif;
+      font-weight: bold;
     }
 
-    .title {
-    font-size: 1.5rem;
+    .js-count-particles {
+      font-size: 1.1em;
     }
 
-    .subtitle-text {
-    font-size: 1rem;
-    padding: 0rem 0.4rem;
+    #stats,
+    .count-particles {
+      -webkit-user-select: none;
+      margin-top: 5px;
+      margin-left: 5px;
     }
 
-    .joinus {
-    font-size: 1rem;
+    #stats {
+      border-radius: 3px 3px 0 0;
+      overflow: hidden;
     }
 
-    .social {
-    max-width: 350px;
-    column-gap: 1rem;
-    row-gap: 0.5rem;
+    .count-particles {
+      border-radius: 0 0 3px 3px;
     }
-
-    .icons {
-    width: 60px;
-    height: 60px;
-    }
-    }
-    /* ---- reset ---- */ canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container ---- */ #particles-js{ position:absolute; width: 100%; height: 100%; background-color: #000000; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; } /* ---- stats.js ---- */ .count-particles{ background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #13E8E9; font-size: .8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; } .js-count-particles{ font-size: 1.1em; } #stats, .count-particles{ -webkit-user-select: none; margin-top: 5px; margin-left: 5px; } #stats{ border-radius: 3px 3px 0 0; overflow: hidden; } .count-particles{ border-radius: 0 0 3px 3px; }
-    </style>
+  </style>
 </head>
 
 <body class="bg-black flex items-start md:items-center justify-center h-full">
@@ -274,9 +324,34 @@
   </div>
   <div class="text-center flex flex-col align-center items-center md:mt-4 h-full">
 
-    <span class="subtitle-text mt-3">WORLD FIRST PRO SMART CONTRACT </span>
+    <span class="subtitle-text mt-3">WORLD FIRST GLOBAL SMART CONTRACT</span>
     <!-- </div>   -->
-
+    <div class="text-white border-2 rounded-md px-2 py-4 mx-2 border-orange-500">
+      <h2 class="text-3xl md:text-4xl font-bold">GLOBAL AUTOPOOL</h2>
+      <h2 class="text-2xl">(Non-Working)</h2>
+      <h2 class="text-2xl">Launching after</h>
+      <!--Timer-->
+      <div class="mx-auto mt-2 bottom-20 text-primary text-center">
+        <div id="timer" class="text-2xl mb-4">
+          <div class="timer-circle">
+            <span id="days">0</span>
+            <p>DAYS</p>
+          </div>
+          <div class="timer-circle">
+            <span id="hours">0</span>
+            <p>HOURS</p>
+          </div>
+          <div class="timer-circle">
+            <span id="minutes">0</span>
+            <p>MINS</p>
+          </div>
+          <div class="timer-circle">
+            <span id="seconds">0</span>
+            <p>SECS</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="flex flex-col items-center logocircle min-h-[15rem] min-w-[15rem]">
       <h1 class="title uppertitle font-bold">Meta-pro.space</h1>
@@ -290,27 +365,7 @@
       <h1 class="title lowertitle font-bold">Meta-pro.space</h1>
     </div>
 
-    <!--Timer-->
-    <div class="mx-auto mt-2 bottom-20 text-primary text-center">
-      <div id="timer" class="text-2xl mb-4">
-        <div class="timer-circle">
-          <span id="days">0</span>
-          <p>DAYS</p>
-        </div>
-        <div class="timer-circle">
-          <span id="hours">0</span>
-          <p>HOURS</p>
-        </div>
-        <div class="timer-circle">
-          <span id="minutes">0</span>
-          <p>MINS</p>
-        </div>
-        <div class="timer-circle">
-          <span id="seconds">0</span>
-          <p>SECS</p>
-        </div>
-      </div>
-    </div>
+
     <!-- <div class="mx-10 mb-10 md:mx-auto max-w-96 mt-2 bottom-20 text-primary rounded-md border-2 text-white p-2">
       <p class=""><span class="text-green-500 font-bold">CONGRATULATIONS! 📯📯📯 </span><br>
         <span class="text-right">Meta-pro.space is ready for launch the 1st Millionaire Program "POWER MATRIX" with full strength. </span><br><br>
@@ -321,9 +376,9 @@
         <span class="font-bold">Thank you so much </span>
       </p>
     </div> -->
-    <div class="text-2xl top-0 mb-2 comingsoon">
+    <!-- <div class="text-2xl top-0 mb-2 comingsoon">
       <span class="font-bold text-white">ON BEP20 USDT</span>
-    </div>
+    </div> -->
     <p class="joinus text-blue-200">
       Join Our Largest Network For More Infromation
     </p>
