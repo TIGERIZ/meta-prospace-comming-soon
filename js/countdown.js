@@ -34,7 +34,7 @@ function startCountdown() {
 
 
       // Set new countDownDate to 24 hours later
-      countDownDate = new Date(now + (24 * 60 * 60 * 1000)).getTime();
+      countDownDate = new Date(now + (22 * 60 * 60 * 1000)).getTime();
       // Restart the countdown
       startCountdown();
     }
