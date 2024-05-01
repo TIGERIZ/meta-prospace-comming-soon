@@ -2,7 +2,7 @@
 
 function startCountdown() {
   // Set the date we're counting down to
-  var countDownDate = new Date("May 2, 2024 11:30:00").getTime();
+  var countDownDate = new Date("May 2, 2024 9:30:00").getTime();
 
   // Update the count down every 1 second
   function updateCountdown() {
