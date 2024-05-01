@@ -146,8 +146,9 @@
     .comingsoon {
       color: rgb(0, 255, 94);
     }
-    .brightness-man{
-      animation: rotate 15s linear infinite,brightness-up 2s ease-in infinite;
+
+    .brightness-man {
+      animation: rotate 15s linear infinite, brightness-up 2s ease-in infinite;
       border-radius: 50%;
     }
 
@@ -177,6 +178,7 @@
       from {
         transform: rotate(0deg);
       }
+
       to {
         transform: rotate(360deg);
       }
@@ -190,7 +192,7 @@
       50% {
         filter: brightness(80%);
       }
-      
+
       100% {
         filter: brightness(100%);
       }
@@ -347,12 +349,14 @@
         </g>
       </svg>
     </div>
-    <div><h2 class="text-3xl text-yellow-500 font-bold text-nowrap mx-auto text-center">META PRO</h2></div>
+    <div>
+      <h2 class="text-3xl text-yellow-500 font-bold text-nowrap mx-auto text-center">META PRO</h2>
+    </div>
     <div class=""></div>
   </div>
   <!-- <div id="nodeBackground"></div> -->
-  <div class="fixed top-0 z-[-998] flex justify-center items-center h-full">
-    <img src="./assets/bgnewimg.jpeg" class="brightness-man"  loading="eager"  alt="Background"/>
+  <div id="cong" class="fixed top-0 z-[-998] flex justify-center items-center h-full">
+    <img src="./assets/bgnewimg.jpeg" class="brightness-man" loading="eager" alt="Background" />
   </div>
   <!-- <div class="fixed z-[-999] top-0 left-0 h-full w-full flex justify-center items-center">
     <div id="particles-js"></div>
@@ -360,34 +364,36 @@
     <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
     <script src="./js/particals.js"></script>
   </div> -->
-  <div class="text-center flex flex-col align-center items-center mt-28 md:mt-7 h-full">
+  <div class="text-center flex flex-col align-center items-center mt-28 md:mt-20 h-full">
     <!-- <span class="subtitle-text mt-20">WORLD FIRST GLOBAL SMART CONTRACT</span> -->
     <!-- </div>   -->
-    <div class="text-white border-2 rounded-md px-2 py-4 mx-2 border-orange-500">
-      <h2 class="text-3xl md:text-4xl font-bold">GLOBAL AUTOPOOL</h2>
-      <h2 class="text-2xl">(Non-Working)</h2>
-      <h2 class="text-2xl">Launching after</h>
-        <!--Timer-->
-        <div class="mx-auto mt-2 bottom-20 text-primary text-center">
-          <div id="timer" class="text-2xl mb-4">
-            <div class="timer-circle">
-              <span id="days">0</span>
-              <p>DAYS</p>
-            </div>
-            <div class="timer-circle">
-              <span id="hours">0</span>
-              <p>HOURS</p>
-            </div>
-            <div class="timer-circle">
-              <span id="minutes">0</span>
-              <p>MINS</p>
-            </div>
-            <div class="timer-circle">
-              <span id="seconds">0</span>
-              <p>SECS</p>
-            </div>
+    <div class="text-white  px-2 py-4 mx-2   ">
+      <h2 class="text-3xl md:text-4xl mt-20 md:mt-0 font-bold">GLOBAL AUTOPOOL</h2>
+
+
+      <h2 id="launching-after" class="text-3xl md:text-4xl font-bold">(Launching after)</h2>
+      <!--Timer-->
+      <div class="mx-auto mt-[30%] md:mt-2 bottom-20 text-primary text-center">
+        <h2  class="text-2xl">(Non-Working)</h2>
+        <div id="timer" class=" text-2xl mb-4">
+          <div class="timer-circle">
+            <span id="days">0</span>
+            <p>DAYS</p>
+          </div>
+          <div class="timer-circle">
+            <span id="hours">0</span>
+            <p>HOURS</p>
+          </div>
+          <div class="timer-circle">
+            <span id="minutes">0</span>
+            <p>MINS</p>
+          </div>
+          <div class="timer-circle">
+            <span id="seconds">0</span>
+            <p>SECS</p>
           </div>
         </div>
+      </div>
     </div>
 
     <!-- Rotating Tiger -->
@@ -414,7 +420,7 @@
         <span class="font-bold">Thank you so much </span>
       </p>
     </div> -->
-    
+
     <div class="text-2xl text-white font-bold mt-5"> Social Media</div>
 
     <div class="social">
@@ -468,7 +474,7 @@
       </div>
     </div>
     <div class="copyright md:relative md:bottom-1">
-      <span>META PRO © 2024 All Rights Reserved</span>
+      <span>META PRO ©️ 2024 All Rights Reserved</span>
     </div>
   </div>
 
