@@ -29,6 +29,10 @@ var x = setInterval(function () {
   // If the count down is finished, display text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("timer").innerHTML = "EXPIRED";
+    document.getElementById("timer").innerHTML = ` has launched successfully`;
+    document.getElementById("cong").innerHTML = `<img src="/assets/cong.gif" alt="cong"/>`;
+
+    document.getElementById("launching-after").style.display = "none";
+    document.getElementById("non-working").style.display = "none";
   }
 }, 1000);
